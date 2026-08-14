@@ -80,15 +80,7 @@ python lanshare.py
 | `target` | `~/lanshare` | Target directory where uploaded files are saved |
 | `--port` | `8000` | Port number to run the Uvicorn web server |
 
-### Examples
 
-```bash
-# Save uploaded files to ~/Downloads folder
-python daily_python/lanshare.py ~/Downloads
-
-# Run server on custom port 9000
-python daily_python/lanshare.py ~/photos --port 9000
-```
 
 ---
 
