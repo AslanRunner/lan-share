@@ -55,15 +55,9 @@ pip install fastapi uvicorn python-multipart qrcode rich itsdangerous jinja2
 Start the server from the project directory:
 
 ```bash
-python daily_python/lanshare.py
-```
-
-Or navigate to the `daily_python` directory:
-
-```bash
-cd daily_python
 python lanshare.py
 ```
+
 
 ### 3. Connecting Your Devices
 
