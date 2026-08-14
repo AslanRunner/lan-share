@@ -143,10 +143,8 @@ def format_bytes(size: int) -> str:
     return f"{s} {size_name[i]}"
 
 
-# ==============================================================================
-# FASTAPI ROUTE HANDLERS
-# ==============================================================================
 
+# FASTAPI ROUTE HANDLERS
 @app.get("/login")
 async def login_page(request: Request, error: str = ""):
     """Renders the PIN unlock template with modern Starlette signature."""
