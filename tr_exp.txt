@@ -1,0 +1,58 @@
+================================================================================
+  LAN FILE SHARING SYSTEM (DAILY PYTHON EDİTÖNÜ) - TÜRKÇE AÇIKLAMA VE REHBER
+================================================================================
+
+1. NELER YAPILDI VE SUNUCU HATASI ÇÖZÜMÜ (SERVER ERROR FIX)
+--------------------------------------------------------------------------------
+Proje `daily_python` klasörüne taşındı ve cihazların bağlanırken yaşadığı 
+500 Sunucu Hatası (Server Error) tamamen çözüldü.
+
+- HATA NEDENİ: Starlette/FastAPI'nin yeni sürümlerinde `TemplateResponse` 
+  fonksiyonunun çağrılma yöntemi güncellendi. Eski yöntemde `{"request": request}` 
+  sözlüğü doğrudan iletildiğinde `unhashable type: 'dict'` sunucu hatası veriyordu.
+- ÇÖZÜM: `templates.TemplateResponse(request=request, name="login.html", context={...})` 
+  şeklinde güncellendi. Artık tüm cihazlar (iPhone, Android, Windows, Mac) sorunsuz 
+  giriş ekranına ulaşıyor ve dosya paylaşımı yapabiliyor.
+
+
+2. `daily_python` MODÜLER KLASÖR YAPISI
+--------------------------------------------------------------------------------
+Agust/daily_python/
+├── lanshare.py            # Python Backend, PIN Güvenliği ve Chunk Streaming (~320 satır)
+├── tr_exp.txt             # Türkçe teknik açıklama belgesi
+├── static/                # Ön Yüz (Frontend) CSS ve JS dosyaları
+│   ├── style.css          # Glassmorphism tasarımı, renkler, progress bar ve grid
+│   └── app.js             # Sürükle-Bırak (Drag & Drop), XHR canlı ilerleme çubuğu
+└── templates/             # HTML Şablonları
+    ├── login.html         # 4 Haneli PIN şifre ekranı HTML'i
+    └── index.html         # Ana kontrol paneli (Yükleme alanı ve Dosya galerisi)
+
+
+3. KODUN TEKNİK ÖZETİ VE ÇALIŞMA PRENSİBİ
+--------------------------------------------------------------------------------
+1. `get_lan_ip()`: Bilgisayarın yerel ağdaki (Wi-Fi) IP adresini UDP soketi ile 
+   otomatik tespit eder.
+2. `SERVER_PIN` (PIN Kapısı): Açılışta 4 haneli rastgele bir PIN üretir ve terminalde 
+   renkli olarak basar. Cihazlar bu PIN'i girmeden dosyalara erişemez.
+3. `1 MB Chunk Streaming`: Dosyalar 1 MB'lık parçalar halinde okunup yazılır, 
+   böylece 4 GB'lık videolar dahi bellek (RAM) tüketimini arttırmaz.
+4. `resolve_upload_path()`: Dizin Atlatma (Path Traversal) saldırılarını engeller.
+5. Canlı İlerleme Çubuğu: JS (XHR upload progress) sayesinde dosya yüklenirken 
+   anlık %0-%100 arası doluluk oranını gösterir.
+6. Çift Yönlü Aktarım: Cihazlar hem bilgisayara dosya yükleyebilir, hem de 
+   bilgisayardaki ve diğer cihazların yüklediği tüm dosyaları indirebilir (Download) 
+   veya silebilir (Delete).
+
+
+4. ÇALIŞTIRMA KOMUTU
+--------------------------------------------------------------------------------
+`daily_python` klasörü içerisinden çalıştırmak için:
+
+```bash
+python daily_python/lanshare.py
+```
+veya `daily_python` klasörüne girip:
+```bash
+python lanshare.py
+```
+================================================================================

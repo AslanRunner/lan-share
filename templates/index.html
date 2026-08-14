@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAN Share Pro - Gallery & Transfer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>📷 LAN Share Pro</h1>
+            <p>Serving files over local Wi-Fi • Host: <code>{{ host_ip }}:{{ port }}</code></p>
+        </div>
+
+        <!-- Drag & Drop Upload Section -->
+        <div class="upload-section">
+            <div class="dropzone" id="dropzone" onclick="document.getElementById('file-input').click()">
+                <div class="dropzone-icon">☁️</div>
+                <h3>Drop files here or tap to pick</h3>
+                <p>Upload photos, 4K videos, or documents directly</p>
+                <input type="file" id="file-input" multiple onchange="uploadFiles(this.files)">
+            </div>
+            <div class="progress-list" id="progress-list"></div>
+        </div>
+
+        <!-- Gallery Header -->
+        <div class="gallery-title">
+            <span>📁 Uploaded Files ({{ files|length }})</span>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid">
+            {% for f in files %}
+            <div class="file-card" id="card-{{ f.name }}">
+                {% if f.is_image %}
+                <img src="/files/{{ f.name }}" alt="{{ f.name }}" class="file-thumb" loading="lazy">
+                {% else %}
+                <div class="file-icon-placeholder">📄</div>
+                {% endif %}
+
+                <div class="file-info">
+                    <div class="file-title" title="{{ f.name }}">{{ f.name }}</div>
+                    <div class="file-meta">{{ f.size_str }} • {{ f.mtime_str }}</div>
+                </div>
+
+                <div class="file-actions">
+                    <a href="/files/{{ f.name }}" download class="btn-action btn-download" title="Download">
+                        ⬇️ Download
+                    </a>
+                    <button onclick="deleteFile('{{ f.name }}')" class="btn-action btn-delete" title="Delete">
+                        🗑️ Delete
+                    </button>
+                </div>
+            </div>
+            {% else %}
+            <div class="empty-state">
+                <div class="empty-icon">📂</div>
+                <p>No files uploaded yet. Drop some files above!</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- External Modular JavaScript -->
+    <script src="/static/app.js"></script>
+</body>
+</html>

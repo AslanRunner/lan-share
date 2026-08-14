@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAN Share - Unlock Access</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="login-card">
+        <div class="icon-badge">🔒</div>
+        <h2>LAN Share</h2>
+        <p>Enter the 4-digit PIN shown on host terminal</p>
+
+        {% if error %}
+        <div class="error-msg">⚠️ {{ error }}</div>
+        {% endif %}
+
+        <form method="post" action="/login">
+            <input type="password" name="pin" maxlength="4" placeholder="••••" required autofocus pattern="[0-9]*" inputmode="numeric">
+            <button type="submit" class="btn-unlock">Unlock Access</button>
+        </form>
+    </div>
+</body>
+</html>
