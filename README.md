@@ -7,7 +7,7 @@
 [![Uvicorn](https://img.shields.io/badge/Uvicorn-ASGI-4051B5?style=for-the-badge&logo=python&logoColor=white)](https://www.uvicorn.org/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
 
-**LAN Share ** turns your laptop into a high-speed, secure local file sharing hub. Any device on the same Wi-Fi network (iOS, Android, Windows, Mac, Linux) can scan a QR code printed in your terminal, enter a 4-digit PIN, and instantly upload or download photos, 4K videos, and large documents without installing any app or trusting cloud services.
+**LAN Share** turns your laptop into a high-speed, secure local file sharing hub. Any device on the same Wi-Fi network (iOS, Android, Windows, Mac, Linux) can scan a QR code printed in your terminal, enter a 4-digit PIN, and instantly upload or download photos, 4K videos, and large documents without installing any app or trusting cloud services.
 
 ---
 
