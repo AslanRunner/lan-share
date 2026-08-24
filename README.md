@@ -85,8 +85,6 @@ python lanshare.py
 # Save uploaded files to ~/Downloads folder
 python lanshare.py ~/Downloads
 
-# Run server on custom port 9000
-python lanshare.py ~/photos --port 9000
 ```
 
 ---
