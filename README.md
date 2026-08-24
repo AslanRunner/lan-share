@@ -11,6 +11,8 @@
   <img src="static/preview.png" alt="LAN Share UI Preview" width="650" style="border-radius: 16px; box-shadow: 0 20px 20px rgba(0,0,0,0.5);">
 </p>
 
+![Preview](static/preview.png)
+
 **LAN Share** turns your laptop into a high-speed, secure local file sharing hub. Any device on the same Wi-Fi network (iOS, Android, Windows, Mac, Linux) can scan a QR code printed in your terminal, enter a 4-digit PIN, and instantly upload or download photos, 4K videos, and large documents without installing any app or trusting cloud services.
 
 ---
