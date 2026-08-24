@@ -26,21 +26,23 @@
 
 ---
 
-## 📂 Project Directory Structure
+## Project Directory Structure
 
 ```
-Agust/daily_python/1/
+
+lan-share/
+├── static/                # Frontend Assets
+│   ├── style.css          # CSS styling
+│   └── app.js             # Drag-and-drop & XHR Upload Progress JavaScript
+├── templates/             # HTML Templates
+│   ├── login.html         # 4-Digit PIN Unlock Screen HTML
+│   └── index.html         # Main upload dropzone & live file gallery
 ├── lanshare.py            # FastAPI backend server, security & streaming logic
-├── tr_exp.txt             # Detailed Turkish technical guide & architecture notes
-├── README.md              # Project documentation with screenshot preview
-├── static/                # Frontend assets
-│   ├── style.css          # Glassmorphism design system & CSS styling
-│   ├── app.js             # Drag-and-drop & XHR upload progress JavaScript
-│   └── preview.png        # Web interface screenshot preview
-└── templates/             # HTML templates
-    ├── login.html         # 4-Digit PIN unlock screen
-    └── index.html         # Main upload dropzone & live file gallery
+└── .gitignore             # Git tracking exclusion rules
+
 ```
+
+
 
 ---
 
