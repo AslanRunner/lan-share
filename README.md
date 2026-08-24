@@ -61,7 +61,7 @@ pip install fastapi uvicorn python-multipart qrcode rich itsdangerous jinja2
 Start the server from the directory:
 
 ```bash
-.\.venv\Scripts\python.exe .\lanshare.py
+python lanshare.py
 ```
 
 ### 3. Connecting Your Devices
