@@ -7,9 +7,6 @@
 [![Uvicorn](https://img.shields.io/badge/Uvicorn-ASGI-4051B5?style=for-the-badge&logo=python&logoColor=white)](https://www.uvicorn.org/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
 
-<p align="center">
-  <img src="static/preview.png" alt="LAN Share UI Preview" width="650" style="border-radius: 16px; box-shadow: 0 20px 20px rgba(0,0,0,0.5);">
-</p>
 
 ![Preview](static/preview.png)
 
