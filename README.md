@@ -15,14 +15,14 @@
 
 ---
 
-## ✨ Features
+##  Features
 
-- 🔒 **4-Digit PIN Security Gate**: Generates a random 4-digit PIN on host startup and enforces cryptographically signed session cookies (`itsdangerous`) to block unauthorized devices on public Wi-Fi.
-- ⚡ **1 MB Chunk Streaming**: Streams uploads in 1 MB chunks directly to disk. Peak RAM usage remains ~1 MB whether transferring a 5 KB text file or a 4 GB video.
-- 🎨 **Modern Glassmorphism UI**: Beautiful, mobile-first responsive dashboard with drag-and-drop dropzone, live upload progress bars, extension badges (`PNG`, `JPG`, `MP4`, `PDF`), and lazy-loaded image thumbnails.
-- 📱 **Cross-Platform & App-Less**: Zero client-side installation. Works on any browser via QR code scanning.
-- 🛡️ **Defense-in-Depth Path Traversal Security**: Strict path sanitization (`resolve_upload_path`) prevents directory traversal attacks on uploads, downloads, and deletions.
-- 📁 **Two-Way Sharing**: Upload files to the laptop OR download and delete existing files directly from any phone or tablet.
+-  **4-Digit PIN Security Gate**: Generates a random 4-digit PIN on host startup and enforces cryptographically signed session cookies (`itsdangerous`) to block unauthorized devices on public Wi-Fi.
+-  **1 MB Chunk Streaming**: Streams uploads in 1 MB chunks directly to disk. Peak RAM usage remains ~1 MB whether transferring a 5 KB text file or a 4 GB video.
+-  **Modern Glassmorphism UI**: Beautiful, mobile-first responsive dashboard with drag-and-drop dropzone, live upload progress bars, extension badges (`PNG`, `JPG`, `MP4`, `PDF`), and lazy-loaded image thumbnails.
+-  **Cross-Platform & App-Less**: Zero client-side installation. Works on any browser via QR code scanning.
+-  **Defense-in-Depth Path Traversal Security**: Strict path sanitization (`resolve_upload_path`) prevents directory traversal attacks on uploads, downloads, and deletions.
+-  **Two-Way Sharing**: Upload files to the laptop OR download and delete existing files directly from any phone or tablet.
 
 ---
 
@@ -46,7 +46,7 @@ lan-share/
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### 1. Prerequisites & Installation
 
@@ -72,7 +72,7 @@ Start the server from the directory:
 
 ---
 
-## ⚙️ CLI Options & Flags
+##  CLI Options & Flags
 
 | Flag / Parameter | Default | Description |
 | :--- | :--- | :--- |
@@ -91,7 +91,7 @@ python lanshare.py ~/photos --port 9000
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Backend Framework**: [FastAPI](https://fastapi.tiangolo.com/) + [Uvicorn](https://www.uvicorn.org/) (ASGI)
 - **Security & Cookies**: [itsdangerous](https://itsdangerous.palletsprojects.com/) (Cryptographic URLSafeSerializer)
@@ -101,6 +101,3 @@ python lanshare.py ~/photos --port 9000
 
 ---
 
-## 📄 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
