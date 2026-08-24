@@ -1,4 +1,4 @@
-# 📷 LAN Share
+# LAN Share
 
 > **Zero-Config, AirDrop-for-Everyone Peer-to-Peer LAN File Sharing System**
 
@@ -8,7 +8,7 @@
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
 
 <p align="center">
-  <img src="static/preview.png" alt="LAN Share UI Preview" width="650" style="border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+  <img src="static/preview.png" alt="LAN Share UI Preview" width="650" style="border-radius: 16px; box-shadow: 0 20px 20px rgba(0,0,0,0.5);">
 </p>
 
 **LAN Share** turns your laptop into a high-speed, secure local file sharing hub. Any device on the same Wi-Fi network (iOS, Android, Windows, Mac, Linux) can scan a QR code printed in your terminal, enter a 4-digit PIN, and instantly upload or download photos, 4K videos, and large documents without installing any app or trusting cloud services.
