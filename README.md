@@ -52,7 +52,7 @@ lan-share/
 Ensure Python 3.9+ is installed, then install the required dependencies:
 
 ```bash
-pip install fastapi uvicorn python-multipart qrcode rich itsdangerous jinja2
+python -m pip install -r requirements.txt
 ```
 
 ### 2. Running the Server
@@ -98,3 +98,18 @@ python lanshare.py ~/Downloads
 
 ---
 
+
+
+---
+
+## Security Notes
+
+LAN Share is intended for trusted local networks. The PIN limits casual access but does not replace transport encryption or a hardened identity system. Do not expose port 8000 directly to the public internet, and review the target directory before sharing.
+
+## Contributing
+
+Issues and pull requests are welcome. Security-sensitive reports should avoid publishing secrets or personal files.
+
+## License
+
+Released under the [MIT License](LICENSE).
